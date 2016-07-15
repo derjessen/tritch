@@ -1,6 +1,10 @@
 com/torben/Controllers.class
+com/torben/entities/GameStats.class
 com/torben/channels/Channels.class
+com/torben/games/GameRepository.class
 com/torben/TritchApplication.class
 com/torben/games/TopGames$1.class
+com/torben/entities/TotalViewer.class
 com/torben/games/TopGames.class
+com/torben/entities/Game.class
 com/torben/channels/Channels$1.class

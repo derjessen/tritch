@@ -33,6 +33,10 @@ public class GameStats {
         this.game = game;
     }
 
+    @GeneratedValue
+    @Column(
+            name = "measuringtime"
+    )
     public LocalDateTime getMeasuringTime() {
         return measuringTime;
     }
@@ -41,6 +45,10 @@ public class GameStats {
         this.measuringTime = measuringTime;
     }
 
+    @GeneratedValue
+    @Column(
+            name = "viewer"
+    )
     public int getViewer() {
         return viewer;
     }
@@ -49,6 +57,10 @@ public class GameStats {
         this.viewer = viewer;
     }
 
+    @GeneratedValue
+    @Column(
+            name = "channels"
+    )
     public int getChannels() {
         return channels;
     }

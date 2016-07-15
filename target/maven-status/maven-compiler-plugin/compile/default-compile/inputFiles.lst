@@ -1,4 +1,8 @@
 /home/hauke/git repos/Tritch/src/main/java/com/torben/Controllers.java
+/home/hauke/git repos/Tritch/src/main/java/com/torben/games/GameRepository.java
 /home/hauke/git repos/Tritch/src/main/java/com/torben/games/TopGames.java
+/home/hauke/git repos/Tritch/src/main/java/com/torben/entities/GameStats.java
+/home/hauke/git repos/Tritch/src/main/java/com/torben/entities/Game.java
 /home/hauke/git repos/Tritch/src/main/java/com/torben/channels/Channels.java
+/home/hauke/git repos/Tritch/src/main/java/com/torben/entities/TotalViewer.java
 /home/hauke/git repos/Tritch/src/main/java/com/torben/TritchApplication.java

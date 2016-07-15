@@ -36,6 +36,10 @@ public class Game implements Serializable {
         this.gameName = gameName;
     }
 
+    @GeneratedValue
+    @Column(
+            name = "gamename"
+    )
     public int getTwitchId() {
         return twitchId;
     }
@@ -48,6 +52,13 @@ public class Game implements Serializable {
         this.gameStats = gameStats;
     }
 
+    @Id
+    @GeneratedValue
+    @Column(
+            name = "id_game",
+            nullable = false,
+            unique = true
+    )
     public int getId() {
         return id;
     }
