@@ -25,7 +25,7 @@ public class TopGames {
     @Scheduled(fixedRate = 20000)
     public void getTopGames() {
         RequestParams params = new RequestParams();
-        params.put("limit", 1);
+        params.put("limit", 2);
 
         twitch.games().getTop(params, new TopGamesResponseHandler() {
 
@@ -35,9 +35,10 @@ public class TopGames {
                 System.out.println(list.size());
                 for (TopGame game : list) {
                     Game myGame = new Game();
-                    myGame.setGameName(game.getGame().getName()); 
-                    myGame.setTwitchId(((int) game.getGame().getId()));
+                    myGame.setGameName("peace");
+                    myGame.setTwitchId(1337);
                     gameRepository.save(myGame);
+
                     System.out.println(game.getGame().getName() + " hat " + game.getViewers() + " Zuschauer");
                 }
             }

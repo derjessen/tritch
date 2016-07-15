@@ -1,9 +1,6 @@
 package com.torben.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 /**
@@ -14,11 +11,26 @@ import java.time.LocalDateTime;
         name = "tbltotalviewer"
 )
 public class TotalViewer {
+    private int id;
     private LocalDateTime measuringTime;
     private int viewer;
     private int channels;
 
+    @Id
     @GeneratedValue
+    @Column(
+            name = "id_totalviewer",
+            nullable = false,
+            unique = true
+    )
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Column(
             name = "measuringtime"
     )
@@ -30,7 +42,6 @@ public class TotalViewer {
         this.measuringTime = measuringTime;
     }
 
-    @GeneratedValue
     @Column(
             name = "viewer"
     )
@@ -41,8 +52,7 @@ public class TotalViewer {
     public void setViewer(int viewer) {
         this.viewer = viewer;
     }
-
-    @GeneratedValue
+    
     @Column(
             name = "channels"
     )

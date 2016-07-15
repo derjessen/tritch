@@ -11,10 +11,24 @@ import java.time.LocalDateTime;
         name = "tblgamestats"
 )
 public class GameStats {
+    private int id;
     private Game game;
     private LocalDateTime measuringTime;
     private int viewer;
     private int channels;
+
+    @Id
+    @GeneratedValue
+    @Column(
+            name = "id_gamestats"
+    )
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     @ManyToOne(
             fetch = FetchType.LAZY
@@ -33,7 +47,6 @@ public class GameStats {
         this.game = game;
     }
 
-    @GeneratedValue
     @Column(
             name = "measuringtime"
     )
@@ -45,7 +58,6 @@ public class GameStats {
         this.measuringTime = measuringTime;
     }
 
-    @GeneratedValue
     @Column(
             name = "viewer"
     )
@@ -57,7 +69,6 @@ public class GameStats {
         this.viewer = viewer;
     }
 
-    @GeneratedValue
     @Column(
             name = "channels"
     )
