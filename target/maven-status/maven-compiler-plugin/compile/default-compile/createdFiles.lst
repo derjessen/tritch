@@ -1,2 +1,6 @@
-com\torben\Controllers.class
-com\torben\TritchApplication.class
+com/torben/Controllers.class
+com/torben/channels/Channels.class
+com/torben/TritchApplication.class
+com/torben/games/TopGames$1.class
+com/torben/games/TopGames.class
+com/torben/channels/Channels$1.class
