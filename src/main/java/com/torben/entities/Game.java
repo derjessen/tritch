@@ -21,7 +21,7 @@ public class Game implements Serializable {
 
     @OneToMany(
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY,
+            fetch = FetchType.EAGER,
             mappedBy = "game"
     )
     public List<GameStats> getGameStats() {

@@ -32,12 +32,15 @@ public class GameStats {
     }
 
     @ManyToOne(
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     @JoinColumn(
             name = "fk_game",
+
+
+            referencedColumnName = "id_game",
             nullable = false,
-            insertable = false,
+            //insertable = false,
             updatable = false
     )
     public Game getGame() {
