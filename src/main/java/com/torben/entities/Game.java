@@ -55,6 +55,8 @@ public class Game implements Serializable {
     }
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="tblgame_id_game_seq")
+    @SequenceGenerator(name="tblgame_id_game_seq", sequenceName="tblgame_id_game_seq", allocationSize=1)
     @Column(
             name = "id_game",
             nullable = false,

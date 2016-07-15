@@ -1,7 +1,7 @@
 package com.torben.entities;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 
 /**
  * Created by hauke on 15.07.16.
@@ -13,12 +13,13 @@ import java.time.LocalDateTime;
 public class GameStats {
     private int id;
     private Game game;
-    private LocalDateTime measuringTime;
+    private Timestamp measuringTime;
     private int viewer;
     private int channels;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="tblgamestats_id_gamestats_seq")
+    @SequenceGenerator(name="tblgamestats_id_gamestats_seq", sequenceName="tblgamestats_id_gamestats_seq", allocationSize=1)
     @Column(
             name = "id_gamestats"
     )
@@ -50,11 +51,11 @@ public class GameStats {
     @Column(
             name = "measuringtime"
     )
-    public LocalDateTime getMeasuringTime() {
+    public Timestamp getMeasuringTime() {
         return measuringTime;
     }
 
-    public void setMeasuringTime(LocalDateTime measuringTime) {
+    public void setMeasuringTime(Timestamp measuringTime) {
         this.measuringTime = measuringTime;
     }
 

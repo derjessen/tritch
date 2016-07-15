@@ -17,7 +17,8 @@ public class TotalViewer {
     private int channels;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="tbltotalviewer_id_toatlviewer_seq")
+    @SequenceGenerator(name="tbltotalviewer_id_toatlviewer_seq", sequenceName="tbltotalviewer_id_toatlviewer_seq", allocationSize=1)
     @Column(
             name = "id_totalviewer",
             nullable = false,
@@ -52,7 +53,7 @@ public class TotalViewer {
     public void setViewer(int viewer) {
         this.viewer = viewer;
     }
-    
+
     @Column(
             name = "channels"
     )
